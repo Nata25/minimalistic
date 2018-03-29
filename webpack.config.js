@@ -13,11 +13,25 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.pug$/,
+        loader: 'pug-html-loader'
+      },
+      {
         test: /\.css$/,
         use: [
           { loader: 'style-loader/url' },
           { loader: 'file-loader' }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+            loader: "style-loader"
+        }, {
+            loader: "css-loader"
+        }, {
+            loader: "sass-loader"
+        }]
       },
       {
         test: /\.ts$/,
@@ -29,7 +43,13 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        use: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+          }
+        }
       }
     ]
   },
@@ -38,7 +58,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    hot: true
-  }
-
+    hot: true,
+    stats: 'minimal',
+  },
 }

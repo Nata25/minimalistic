@@ -1,5 +1,6 @@
-<template lang="html">
-  <div>And this is a Vue component!</div>
+<template lang="pug">
+  div
+    p And this is a Vue component!
 </template>
 
 <script lang="ts">
@@ -12,7 +13,7 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
   div {
     display: flex;
     align-items: center;
@@ -22,6 +23,11 @@
     height: 250px;
     color: rgb(192, 118, 8);
     border: 1px solid rgb(192, 118, 8);
-    border-radius: 50%;
+    border-radius: 45%;
+
+    p {
+      font: italic 20px/200% Georgia, sans-serif;
+      color: inherit;
+    }
   }
 </style>
