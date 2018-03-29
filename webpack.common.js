@@ -1,11 +1,12 @@
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/app.ts',
   output: {
     filename: 'app.js',
-    path: __dirname + './dist',
+    path: __dirname + '/dist',
   },
   resolve: {
     extensions: ['.js', '.ts', '.vue'],
@@ -26,16 +27,16 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [{
-            loader: "style-loader"
+            loader: 'style-loader'
         }, {
-            loader: "css-loader"
+            loader: 'css-loader'
         }, {
-            loader: "sass-loader"
+            loader: 'sass-loader'
         }]
       },
       {
         test: /\.ts$/,
-        exclude: path.resolve(__dirname, "node_modules"),
+        exclude: path.resolve(__dirname, 'node_modules'),
         loader: 'ts-loader',
         options: {
           appendTsSuffixTo: [/\.vue$/]
@@ -54,11 +55,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
   ],
-  devServer: {
-    hot: true,
-    stats: 'minimal',
-  },
 }

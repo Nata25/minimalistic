@@ -43,8 +43,8 @@
     margin: 20px auto;
     width: 250px;
     height: 250px;
-    color: rgb(192, 118, 8);
-    border: 1px solid rgb(192, 118, 8);
+    // color: #4808c0;
+    border: 1px solid #c07608;
     border-radius: 45%;
 
     p {
