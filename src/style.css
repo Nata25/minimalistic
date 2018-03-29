@@ -1,0 +1,10 @@
+* {
+  color: rgb(70, 76, 102);
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "canvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack-dev-server --port 9000 --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.0.0-1",
+    "file-loader": "^1.1.11",
+    "style-loader": "^0.20.3",
+    "typescript": "^2.8.1",
+    "webpack": "^4.3.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {}
+}
