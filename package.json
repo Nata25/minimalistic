@@ -1,19 +1,26 @@
 {
-  "name": "canvas",
+  "name": "basic-kit",
   "version": "1.0.0",
-  "description": "",
+  "description": "Educational kit for webpack + ts + vue",
   "main": "index.js",
   "scripts": {
     "serve": "webpack-dev-server --port 9000 --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "natalia",
   "license": "ISC",
   "devDependencies": {
+    "@vue/cli": "^3.0.0-beta.6",
     "awesome-typescript-loader": "^5.0.0-1",
+    "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "style-loader": "^0.20.3",
+    "ts-loader": "^4.1.0",
     "typescript": "^2.8.1",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-property-decorator": "^6.0.0",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^4.3.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1"

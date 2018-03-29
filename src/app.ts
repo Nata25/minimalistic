@@ -1,14 +1,7 @@
 import './style.css';
+import Vue from 'vue';
+import App from './App.vue';
 
-class Greeting {
-  static sayHello(): void {
-    console.log('hello brave new world!!!!!');
-  }
-
-  static arrow = () => {
-    console.log('from arrow func');
-  }
-}
-
-Greeting.sayHello();
-Greeting.arrow();
+new Vue({
+  render: h => h(App)
+}).$mount('#app');

@@ -8,7 +8,7 @@ module.exports = {
     path: __dirname + './dist',
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.ts', '.vue'],
   },
   module: {
     rules: [
@@ -22,7 +22,14 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: path.resolve(__dirname, "node_modules"),
-        use: 'awesome-typescript-loader',
+        loader: 'ts-loader',
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        }
+      },
+      {
+        test: /\.vue$/,
+        use: 'vue-loader'
       }
     ]
   },

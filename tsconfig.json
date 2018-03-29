@@ -5,7 +5,8 @@
         "outDir": "dist",
         "allowJs": true,
         "noImplicitAny": true,
-        "sourceMap": false
+        "sourceMap": false,
+        "experimentalDecorators": true,
     },
     "include": [
         "src/**/*"
