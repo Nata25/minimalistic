@@ -32,28 +32,6 @@
     }
   }
 
-  // export default {
-  //   data() {
-  //     return {
-  //       number: 0,
-  //     }
-  //   },
-  //   computed: {
-  //     color() {
-  //       const hash = (Math.random() * this.number).toString(16);
-  //       return this.number === 0 ? '#fff' : '#' + hash.substr(hash.indexOf('.') + 1, 6);
-  //     }
-  //   },
-  //   methods: {
-  //     handleClick() {
-  //       this.number++;
-  //     },
-  //     reset() {
-  //       this.number = 0;
-  //     }
-  //   }
-  // }
-
 </script>
 
 <style lang="scss" scoped>
