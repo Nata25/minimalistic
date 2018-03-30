@@ -4,7 +4,7 @@
   "description": "Educational kit for webpack + ts + vue",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js --port 9000 --mode development",
+    "start": "webpack-dev-server --hot --config webpack.dev.js --port 9000 --mode development",
     "prod": "webpack --config webpack.prod.js --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,10 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "@vue/cli": "^3.0.0-beta.6",
-    "awesome-typescript-loader": "^5.0.0-1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "fork-ts-checker-webpack-plugin": "^0.4.1",
     "html-webpack-plugin": "^3.1.0",
     "node-sass": "^4.8.3",
     "pug": "^2.0.3",
@@ -23,6 +23,7 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "ts-loader": "^4.1.0",
+    "tslint": "^5.9.1",
     "typescript": "^2.8.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "vue": "^2.5.16",

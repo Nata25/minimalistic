@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     span.hash {{ color }}
-    p Number of clicks: {{ number }}
+    p A number of clicks: {{ number }}
     button(@click="handleClick", :style="{'backgroundColor': color}") Click me!
     button(@click="reset") Reset
 </template>
@@ -32,6 +32,28 @@
     }
   }
 
+  // export default {
+  //   data() {
+  //     return {
+  //       number: 0,
+  //     }
+  //   },
+  //   computed: {
+  //     color() {
+  //       const hash = (Math.random() * this.number).toString(16);
+  //       return this.number === 0 ? '#fff' : '#' + hash.substr(hash.indexOf('.') + 1, 6);
+  //     }
+  //   },
+  //   methods: {
+  //     handleClick() {
+  //       this.number++;
+  //     },
+  //     reset() {
+  //       this.number = 0;
+  //     }
+  //   }
+  // }
+
 </script>
 
 <style lang="scss" scoped>
@@ -43,7 +65,6 @@
     margin: 20px auto;
     width: 250px;
     height: 250px;
-    // color: #4808c0;
     border: 1px solid #c07608;
     border-radius: 45%;
 

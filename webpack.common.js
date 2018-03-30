@@ -9,7 +9,7 @@ module.exports = {
     path: __dirname + '/docs',
   },
   resolve: {
-    extensions: ['.js', '.ts', '.vue'],
+    extensions: ['.js', '.ts', '.vue']
   },
   module: {
     rules: [
@@ -36,11 +36,17 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        exclude: path.resolve(__dirname, 'node_modules'),
-        loader: 'ts-loader',
-        options: {
-          appendTsSuffixTo: [/\.vue$/]
-        }
+        exclude: [
+          path.resolve(__dirname, 'node_modules')
+        ],
+        use: [
+          {
+          loader: 'ts-loader',
+          options: {
+            appendTsSuffixTo: [/\.vue$/],
+            transpileOnly: true // prevents full app reload
+          },
+        }],
       },
       {
         test: /\.vue$/,
