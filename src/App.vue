@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     span.hash {{ color }}
-    p A number of clicks: {{ number }}
+    p Number of clicks: {{ number }}
     button(@click="handleClick", :style="{'backgroundColor': color}") Click me!
     button(@click="reset") Reset
 </template>

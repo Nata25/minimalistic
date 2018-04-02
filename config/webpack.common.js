@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/app.ts',
   output: {
     filename: 'app.js',
-    path: __dirname + '/docs',
+    path: path.resolve(__dirname, '../docs'),
   },
   resolve: {
     extensions: ['.js', '.ts', '.vue']
@@ -27,11 +27,11 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [{
-            loader: 'style-loader'
+          loader: 'style-loader'
         }, {
-            loader: 'css-loader'
+          loader: 'css-loader'
         }, {
-            loader: 'sass-loader'
+          loader: 'sass-loader',
         }]
       },
       {

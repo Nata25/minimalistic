@@ -4,7 +4,7 @@
   "description": "Educational kit for webpack + ts + vue",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --port 9000 --mode development",
+    "start": "webpack-dev-server --hot --port 9000 --config config/webpack.dev.js --mode development",
     "prod": "webpack --config config/webpack.prod.js --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,9 @@
     "file-loader": "^1.1.11",
     "fork-ts-checker-webpack-plugin": "^0.4.1",
     "html-webpack-plugin": "^3.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.8.3",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
     "pug": "^2.0.3",
     "pug-html-loader": "^1.1.5",
     "sass-loader": "^6.0.7",
